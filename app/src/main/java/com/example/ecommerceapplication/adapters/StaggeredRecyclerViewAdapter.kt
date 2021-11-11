@@ -75,7 +75,10 @@ class StaggeredRecyclerViewAdapter (val mContext: Context, val mProducts: ArrayL
             Log.d(TAG, "onClick: You've clicked on a name of an element")
             Toast.makeText(mContext, "You've clicked on a name of an element", Toast.LENGTH_SHORT)
         }
-
+        holder.binding.imageviewWidget.setOnClickListener {
+            Log.d(TAG, "onClick: You've clicked on an image of an element")
+            Toast.makeText(mContext, "You've clicked on an image of an element", Toast.LENGTH_SHORT)
+        }
 
     }
 
