@@ -12,7 +12,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainViewModel(val context: Context) : ViewModel(){
+class MainViewModel() : ViewModel(){
 
     private val TAG = "MainViewModel"
     private var apiService: ApiService
@@ -43,8 +43,7 @@ class MainViewModel(val context: Context) : ViewModel(){
             }
 
             override fun onFailure(call: Call<List<Products>>, t: Throwable) {
-                Toast.makeText(context, "Failed to retrieve data form the server, please check your internet connection.", Toast.LENGTH_LONG).show()
-
+                Log.d(TAG, "onFailure: Failed to retrieve data from the server, please check the internet connection!")
             }
 
         })

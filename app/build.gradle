@@ -9,7 +9,6 @@ plugins {
 
 
 }
-//apply plugin: 'kotlin-android'
 
 android {
     compileSdk 31
