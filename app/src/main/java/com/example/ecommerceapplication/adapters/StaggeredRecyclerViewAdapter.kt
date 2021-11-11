@@ -5,6 +5,7 @@ import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -16,18 +17,10 @@ import com.example.ecommerceapplication.databinding.LayoutGridItemBinding
 import com.example.ecommerceapplication.models.Products
 
 
-class StaggeredRecyclerViewAdapter (val mContext: Context, val mProducts: ArrayList<Products>) : RecyclerView.Adapter<ViewHolder>() {
+class StaggeredRecyclerViewAdapter(val mContext: Context, val mProducts: ArrayList<Products>) : RecyclerView.Adapter<ViewHolder>() {
 
 
     private val TAG = "StaggeredRecyclerViewAd"
-//    private var mProducts: ArrayList<Products> = ArrayList<Products>()
-//    lateinit private var mContext: Context
-
-
-/*    fun StaggeredRecyclerViewAdapter(context: Context, names: ArrayList<String>, imageUrls: ArrayList<String>) {
-
-
-    }*/
 
 
     class GridViewHolder(var binding: LayoutGridItemBinding) : ViewHolder(binding.root) {
@@ -61,15 +54,21 @@ class StaggeredRecyclerViewAdapter (val mContext: Context, val mProducts: ArrayL
 
         var requestOptions: RequestOptions = RequestOptions().placeholder(R.drawable.ic_launcher_background)
 
-
+        //Images
         Glide.with(mContext)
                 .load(mProducts.get(position).image)
+                .placeholder(R.mipmap.ic_launcher_round)
                 .apply(requestOptions)
                 .into((holder as GridViewHolder).binding.imageviewWidget)
 
-/*
-        holder.name.setText(mNames.get(position))
-*/
+        //Prices
+
+
+
+
+
+
+
         holder.setBinding(mProducts.get(position))
 
         holder.binding.Card.setOnClickListener {

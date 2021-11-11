@@ -8,6 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name= "accentColor">#FF4081</color>
-    <color name= "baige">#D6D6C2</color>
+    <color name= "custom">#EEF0F4</color>
 
 </resources>
