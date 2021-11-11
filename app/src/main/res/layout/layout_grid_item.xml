@@ -23,7 +23,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:padding="5dp">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -40,13 +41,12 @@
                     android:layout_height="wrap_content"
                     android:text="@{Product.title}"
                     android:id="@+id/name_widget"
-                    android:layout_below="@+id/imageview_widget"
-                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageview_widget"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraine="parent"
-                    android:laout_below="@+id/image"
+                    app:layout_constraintEnd_toEndOf="parent"
                     android:layout_marginTop="10dp"
-                    android:textColor="#000" />
+                    android:textColor="#000"
+                    android:gravity="center"/>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,18 +16,18 @@ import com.example.ecommerceapplication.databinding.LayoutGridItemBinding
 import com.example.ecommerceapplication.models.Products
 
 
-class StaggeredRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class StaggeredRecyclerViewAdapter (val mContext: Context, val mProducts: ArrayList<Products>) : RecyclerView.Adapter<ViewHolder>() {
 
 
     private val TAG = "StaggeredRecyclerViewAd"
-    private var mProducts: ArrayList<Products> = ArrayList<Products>()
-    lateinit private var mContext: Context
+//    private var mProducts: ArrayList<Products> = ArrayList<Products>()
+//    lateinit private var mContext: Context
 
 
-    fun StaggeredRecyclerViewAdapter(context: Context, names: ArrayList<String>, imageUrls: ArrayList<String>) {
+/*    fun StaggeredRecyclerViewAdapter(context: Context, names: ArrayList<String>, imageUrls: ArrayList<String>) {
 
 
-    }
+    }*/
 
 
     class GridViewHolder(var binding: LayoutGridItemBinding) : ViewHolder(binding.root) {
@@ -50,7 +50,6 @@ class StaggeredRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolde
 
 
     override fun getItemCount(): Int {
-
         return mProducts.size
 
     }
@@ -65,6 +64,7 @@ class StaggeredRecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolde
 
         Glide.with(mContext)
                 .load(mProducts.get(position).image)
+                .apply(requestOptions)
                 .into((holder as GridViewHolder).binding.imageviewWidget)
 
 /*
