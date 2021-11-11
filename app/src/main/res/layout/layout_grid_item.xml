@@ -81,12 +81,6 @@
                     android:gravity="center"
                     android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                     style="@style/Widget.MaterialComponents.Button.TextButton"
-
-
-
-
-
-
                     />
 
 

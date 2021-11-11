@@ -1,6 +1,8 @@
 package com.example.ecommerceapplication.viewmodels
 
+import android.content.Context
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.ecommerceapplication.models.Products
@@ -10,7 +12,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainViewModel() : ViewModel(){
+class MainViewModel(val context: Context) : ViewModel(){
 
     private val TAG = "MainViewModel"
     private var apiService: ApiService
@@ -41,6 +43,7 @@ class MainViewModel() : ViewModel(){
             }
 
             override fun onFailure(call: Call<List<Products>>, t: Throwable) {
+                Toast.makeText(context, "Failed to retrieve data form the server, please check your internet connection.", Toast.LENGTH_LONG).show()
 
             }
 
