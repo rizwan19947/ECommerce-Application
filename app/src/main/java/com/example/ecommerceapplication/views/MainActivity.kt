@@ -1,4 +1,4 @@
-package com.example.ecommerceapplication
+package com.example.ecommerceapplication.views
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.ecommerceapplication.R
 import com.example.ecommerceapplication.adapters.StaggeredRecyclerViewAdapter
 import com.example.ecommerceapplication.databinding.ActivityMainBinding
 import com.example.ecommerceapplication.models.Products
