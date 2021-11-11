@@ -5,7 +5,6 @@ import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -17,7 +16,7 @@ import com.example.ecommerceapplication.databinding.LayoutGridItemBinding
 import com.example.ecommerceapplication.models.Products
 
 
-class StaggeredRecyclerViewAdapter(val mContext: Context, val mProducts: ArrayList<Products>) : RecyclerView.Adapter<ViewHolder>() {
+class StaggeredRecyclerViewAdapter(val mContext: Context, val mProducts: ArrayList<Products>, val staggeredInterface: StaggeredInterface) : RecyclerView.Adapter<ViewHolder>() {
 
 
     private val TAG = "StaggeredRecyclerViewAd"
@@ -73,11 +72,15 @@ class StaggeredRecyclerViewAdapter(val mContext: Context, val mProducts: ArrayLi
 
         holder.binding.Card.setOnClickListener {
             Log.d(TAG, "onClick: You've clicked on an element")
+            staggeredInterface.openDetails(mProducts.get(position))
             Toast.makeText(mContext, "You've clicked on an element", Toast.LENGTH_SHORT).show()
         }
 
 
     }
 
+    interface  StaggeredInterface {
+        fun openDetails(get: Products)
+    }
 
 }

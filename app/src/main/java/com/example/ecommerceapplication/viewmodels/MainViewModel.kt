@@ -1,29 +1,29 @@
 package com.example.ecommerceapplication.viewmodels
 
-import android.content.Context
 import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.ecommerceapplication.models.Products
 import com.example.ecommerceapplication.network.ApiService
-import com.example.ecommerceapplication.network.RetrofitInstance
+import dagger.hilt.android.lifecycle.HiltViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
-class MainViewModel() : ViewModel(){
+@HiltViewModel
+class MainViewModel
+@Inject constructor(private var apiService: ApiService) : ViewModel(){
 
     private val TAG = "MainViewModel"
-    private var apiService: ApiService
+//  private var apiService: ApiService
     private var scheduleLiveData: MutableLiveData<List<Products>>? = null
-
 
 
     init{
         scheduleLiveData = MutableLiveData()
-        val retrofitInstance = RetrofitInstance()
-        apiService = retrofitInstance.getRetrofitClient().create(ApiService::class.java)
+//        val retrofitInstance = RetrofitInstance()
+//        apiService = retrofitInstance.getRetrofitClient().create(ApiService::class.java)
     }
 
 

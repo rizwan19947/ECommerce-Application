@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/ECommerce-Application/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidStudioProjects/ECommerce-Application/app/src/main/res/layout/fragment_cart_fragment.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidStudioProjects/ECommerce-Application/app/src/main/res/layout/fragment_market.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidStudioProjects/ECommerce-Application/app/src/main/res/layout/fragment_product_detail_fragment.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidStudioProjects/ECommerce-Application/app/src/main/res/layout/fragment_splash_screen.xml" value="0.20520833333333333" />
         <entry key="..\:/AndroidStudioProjects/ECommerce-Application/app/src/main/res/layout/layout_grid_item.xml" value="0.20520833333333333" />
         <entry key="..\:/AndroidStudioProjects/EcommerceApplication/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22135416666666666" />
         <entry key="..\:/AndroidStudioProjects/EcommerceApplication/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
