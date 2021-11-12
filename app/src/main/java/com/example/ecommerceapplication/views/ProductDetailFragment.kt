@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.DataBindingUtil.*
 import androidx.fragment.app.findFragment
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.ecommerceapplication.R
 import com.example.ecommerceapplication.adapters.StaggeredRecyclerViewAdapter
@@ -31,13 +32,11 @@ class ProductDetailFragment : Fragment(), StaggeredRecyclerViewAdapter.Staggered
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
 
         binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_product_detail_fragment, container, false, null)
         Log.d(TAG, "onCreateView: "+arguments?.get("product"))
         product = arguments?.get("product") as ProductModel
 
-//        return inflater.inflate(R.layout.fragment_product_detail_fragment, container, false)
         return binding.root
 
     }
@@ -49,26 +48,19 @@ class ProductDetailFragment : Fragment(), StaggeredRecyclerViewAdapter.Staggered
         assignProductDetails()
 
 
+        binding.backButton.setOnClickListener {
+            gotoMarket()
 
-
-
-
-
-
-
-
+        }
 
     }
 
-    override fun openDetails(get: Products) {
 
-    }
 
     private fun assignProductDetails(){
 
 
-        //Images
-
+        //Product Detail Images
         Glide.with(requireContext())
                 .load(Uri.parse(product.image))
                 .into(binding.imageviewWidget)
@@ -77,7 +69,7 @@ class ProductDetailFragment : Fragment(), StaggeredRecyclerViewAdapter.Staggered
 
 
 
-        binding.nameWidget.setText("Product Name:\n\n "+ product.title)
+        binding.nameWidget.setText("Product:\n\n "+ product.title)
         binding.priceWidget.setText("\nPrice: $"+ product.price.toBigDecimal().toString())
         binding.descriptionWidget.setText("\nDescription:\n\n"+ product.description)
         binding.categoryWidget.setText("\nCategory: "+ product.category)
@@ -86,4 +78,24 @@ class ProductDetailFragment : Fragment(), StaggeredRecyclerViewAdapter.Staggered
 
 
     }
+
+
+
+
+
+
+    override fun openDetails(get: Products) {
+
+    }
+
+    override fun gotoCart() {
+
+    }
+
+    override fun gotoMarket() {
+        val action = ProductDetailFragmentDirections.actionProductDetailFragmentToMarketFragment()
+        findNavController().navigate(action)
+    }
+
+
 }

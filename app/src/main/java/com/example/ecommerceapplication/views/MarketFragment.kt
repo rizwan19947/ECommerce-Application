@@ -59,9 +59,22 @@ class MarketFragment : Fragment(), StaggeredRecyclerViewAdapter.StaggeredInterfa
             binding.recyclerView.adapter = sAdapter
             binding.progressBar.visibility = View.GONE
 
+
+            binding.cartButton.setOnClickListener {
+                gotoCart()
+            }
+
+
+
+
         })
 
     }
+
+
+
+
+
 
     override fun openDetails(get: Products) {
         val product = ProductModel(
@@ -76,6 +89,23 @@ class MarketFragment : Fragment(), StaggeredRecyclerViewAdapter.StaggeredInterfa
         )
         val action = MarketFragmentDirections.actionMarketFragmentToProductDetailFragment(product)
         findNavController().navigate(action)
+    }
+
+
+    override fun gotoCart() {
+
+
+        val action = MarketFragmentDirections.actionMarketFragmentToCartFragment()
+        findNavController().navigate(action)
+
+    }
+
+
+
+
+
+    override fun gotoMarket() {
+
     }
 
 }

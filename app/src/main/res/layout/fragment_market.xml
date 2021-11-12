@@ -20,9 +20,9 @@
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/layout_grid_item"
             app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-            />
+            app:layout_constraintTop_toBottomOf="parent"
+            tools:listitem="@layout/layout_grid_item" />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -34,6 +34,15 @@
             app:layout_constraintEnd_toEndOf="@+id/recyclerView"
             app:layout_constraintStart_toStartOf="@+id/recyclerView"
             app:layout_constraintTop_toTopOf="@+id/recyclerView" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/cartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@android:drawable/stat_notify_more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

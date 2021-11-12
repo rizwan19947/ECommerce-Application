@@ -81,6 +81,10 @@ class StaggeredRecyclerViewAdapter(val mContext: Context, val mProducts: ArrayLi
 
     interface  StaggeredInterface {
         fun openDetails(get: Products)
+        fun gotoCart()
+        fun gotoMarket()
     }
+
+
 
 }
