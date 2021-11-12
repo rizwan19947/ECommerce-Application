@@ -36,16 +36,17 @@ Application Structure:
                                                                                         3.Cart
                                                                                         4.Product Description
                                                             
-                    The application uses Retrofit for API calls through Hilt via dependency injection for the ViewModel calss
-                    The API call returns JSON objects. 
+The application uses Retrofit for API calls through Hilt via dependency injection for the ViewModel calss
+The API call returns JSON objects. 
                     
-                    The nav_graph is attached to the main activity which initializes splash screen and moves the user towards the marketlisting fragment.
-                    The marketlisting fragment displays the product data retrieved through the API in a Staggered Recycleview. The StaggeredRecycleView Adapter
-                    also implements an interface to pass the product data across to the other fragments within the application. 
+The nav_graph is attached to the main activity which initializes splash screen and moves the user towards the marketlisting fragment.
+
+The marketlisting fragment displays the product data retrieved through the API in a Staggered Recycleview. The StaggeredRecycleView Adapter
+also implements an interface to pass the product data across to the other fragments within the application. 
                     
-                    Each fragment uses databinding to refer to their objects. 
+Each fragment uses databinding to refer to their objects. 
                     
-                    Glide is used to display the images via feeding the image URLs acquired thorugh the product data. 
+Glide is used to display the images via feeding the image URLs acquired thorugh the product data. 
                     
                     
 What is incomplete: 
