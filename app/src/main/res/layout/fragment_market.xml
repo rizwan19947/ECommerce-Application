@@ -7,17 +7,22 @@
 
     </data>
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".views.MarketFragment">
+        tools:context=".views.MarketFragment"
+
+        >
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:listitem="@layout/layout_grid_item"
-            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"/>
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -32,4 +37,5 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>
