@@ -19,6 +19,16 @@
             tools:listitem="@layout/layout_grid_item"
             app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"/>
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+            app:layout_constraintEnd_toEndOf="@+id/recyclerView"
+            app:layout_constraintStart_toStartOf="@+id/recyclerView"
+            app:layout_constraintTop_toTopOf="@+id/recyclerView" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

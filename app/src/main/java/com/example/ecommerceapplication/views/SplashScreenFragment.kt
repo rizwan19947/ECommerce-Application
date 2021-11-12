@@ -30,7 +30,7 @@ class SplashScreenFragment : Fragment() {
         Handler(Looper.getMainLooper()).postDelayed({
             val action = SplashScreenFragmentDirections.actionSplashScreenFragmentToMarketFragment()
             findNavController().navigate(action)
-        }, 500)
+        }, 2000)
 
     }
 }

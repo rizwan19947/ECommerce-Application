@@ -34,14 +34,19 @@ class MarketFragment : Fragment(), StaggeredRecyclerViewAdapter.StaggeredInterfa
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
+
+
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_market, container, false, null)
+        binding.progressBar.visibility = View.VISIBLE
         return binding.root
 
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
         mainViewModel.initData()
 
         mainViewModel.returnLiveData()?.observe(this, {
@@ -52,6 +57,7 @@ class MarketFragment : Fragment(), StaggeredRecyclerViewAdapter.StaggeredInterfa
             sGridLayoutManager = StaggeredGridLayoutManager(COLUMN_NUMBER, LinearLayoutManager.VERTICAL)
             binding.recyclerView.layoutManager = sGridLayoutManager
             binding.recyclerView.adapter = sAdapter
+            binding.progressBar.visibility = View.GONE
 
         })
 
