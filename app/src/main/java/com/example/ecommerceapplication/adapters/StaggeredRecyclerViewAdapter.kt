@@ -62,18 +62,11 @@ class StaggeredRecyclerViewAdapter(val mContext: Context, val mProducts: ArrayLi
 
 
 
-
-
-
-
-
-
         holder.setBinding(mProducts.get(position))
 
         holder.binding.Card.setOnClickListener {
             Log.d(TAG, "onClick: You've clicked on an element")
             staggeredInterface.openDetails(mProducts.get(position))
-            Toast.makeText(mContext, "You've clicked on an element", Toast.LENGTH_SHORT).show()
         }
 
 

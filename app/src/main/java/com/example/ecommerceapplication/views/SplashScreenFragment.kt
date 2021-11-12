@@ -26,7 +26,7 @@ class SplashScreenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Log.d("SPlsahScreen", "onViewCreated: ")
+        Log.d("SplashScreen", "onViewCreated: ")
         Handler(Looper.getMainLooper()).postDelayed({
             val action = SplashScreenFragmentDirections.actionSplashScreenFragmentToMarketFragment()
             findNavController().navigate(action)

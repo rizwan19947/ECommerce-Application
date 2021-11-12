@@ -5,13 +5,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.ecommerceapplication.R
 import com.example.ecommerceapplication.adapters.StaggeredRecyclerViewAdapter
 import com.example.ecommerceapplication.models.ProductModel
 import com.example.ecommerceapplication.models.Products
+import com.example.ecommerceapplication.viewmodels.MainViewModel
 
 class CartFragment : Fragment(), StaggeredRecyclerViewAdapter.StaggeredInterface {
+
+
+
+
+
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
