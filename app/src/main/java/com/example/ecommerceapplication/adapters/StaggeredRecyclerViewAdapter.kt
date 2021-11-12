@@ -56,11 +56,11 @@ class StaggeredRecyclerViewAdapter(val mContext: Context, val mProducts: ArrayLi
         //Images
         Glide.with(mContext)
                 .load(mProducts.get(position).image)
-                .placeholder(R.mipmap.ic_launcher_round)
+                .placeholder(R.drawable.airlift_assessment)
                 .apply(requestOptions)
                 .into((holder as GridViewHolder).binding.imageviewWidget)
 
-        //Prices
+
 
 
 
